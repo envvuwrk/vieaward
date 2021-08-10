@@ -1,0 +1,337 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.vieawards.com/calendar.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Aug 2021 10:32:18 GMT -->
+<head>
+<meta charset="UTF-8">
+<title>VIA - Vie International Awards</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'css/horizontalslider.css' %}" type="text/css" media="all">
+<link rel="shortcut icon" type="image/x-icon" href="{% url 'awardapp:index' %}">
+<style type="text/css">
+
+.bodytitle{
+
+	height: 65px;
+	background-size: 300px;
+	padding-top: 20px;
+	color: #C5B358;
+	font-weight: 600;
+	font-family: 'TimesNewRoman';
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 60%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+</style>
+
+</head>
+<body>
+	<div class="header">
+				<div class="mainlogo">
+			<a href="{% url 'awardapp:index' %}"><img class="logo" src="{% static 'img/logo.png' %}"></a>
+		</div>
+				<span class="mainmenutab">
+			<div id="menu-icon" onclick="displaymenu()" ><img src="{% static 'img/icon.png' %}" width="25px"></div>
+			<div id="menu-close" onclick="hidemenu()"><img src="{% static 'img/menu-close.png' %}" width="25px"></div>
+			<nav id="nav-menu">
+				 <ul>
+           <li><a href="{% url 'awardapp:index' %}" style="color:#C5B358;">Home</a></li>
+          <li><a href="{% url 'awardapp:about' %}" style="color:#C5B358;">About</a></li>
+          <li><a href="{% url 'awardapp:gallery' %}" style="color:#C5B358;">Gallery</a></li>
+          <li><a href="{% url 'awardapp:calender' %}" style="color:#C5B358;">Calendar</a></li>
+          <li><a href="{% url 'awardapp:contact' %}" style="color:#C5B358;">Contact</a></li>
+				</ul>
+			</nav>
+		</span>
+	</div>
+
+			<section class="">
+			<div class=""><h2 style="color:#C5B358;font-family:times new roman;"> CALENDAR</h2></div>
+
+
+		<div class="gallerythumb">
+			<div class="pointer">
+				<div class="caption" style="color:#C5B358;">VIA 2018 INDIA<br></div>
+			</div>
+			<span class="galleryimage">
+				<div class="mob-name" style="color:#C5B358;">VIA 2018 INDIA</div>
+				<img src="{% static 'img/cal1.png' %}" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+			</span>
+
+		</div>
+
+    <div class="gallerythumb">
+      <div class="pointer">
+        <div class="caption" style="color:#C5B358;">VIA 2019 DUBAI<br></div>
+      </div>
+      <span class="galleryimage">
+        <div class="mob-name" style="color:#C5B358;">VIA 2019 DUBAI</div>
+        <img src="{% static 'img/cal3.png' %}" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+      </span>
+
+    </div>
+
+
+
+
+
+
+
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 2</div>
+      <img src="{% static 'img/cal1.png' %}" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 2</div>
+      <img src="{% static 'img/cal3.png' %}" style="width:100%">
+    </div>
+
+
+
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="column">
+      <img class="demo cursor" src="{% static 'img/cal1.png' %}" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'img/cal3.png' %}" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+    </div>
+
+
+
+  </div>
+</div>
+
+
+
+		<div class="spacer"></div>
+		</section>
+
+		<section class="footer-menu" >
+	<a href="{% url 'awardapp:index' %}"><img src="{% static 'img/logo.png' %}" style="padding: 40px 0px 20px 0px; width: 10%"></a>
+
+<nav>
+		<ul>
+           <li><a href="{% url 'awardapp:index' %}" style="color:#C5B358;">Home</a></li>
+          <li><a href="{% url 'awardapp:about' %}" style="color:#C5B358;">About</a></li>
+          <li><a href="{% url 'awardapp:gallery' %}" style="color:#C5B358;">Gallery</a></li>
+          <li><a href="{% url 'awardapp:calender' %}" style="color:#C5B358;">Calendar</a></li>
+          <li><a href="{% url 'awardapp:contact' %}" style="color:#C5B358;">Contact</a></li>
+		</ul>
+	</nav>
+
+</section>
+<section class="social-icons" style="background-color:black;" >
+	<div style="background-color: black; padding: 55px;">
+	          <a href="https://www.instagram.com/viefashionweek/" target="_blank"><img class="social" src="{% static 'img/insta.png' %}"  ></a>
+             <a href="https://www.facebook.com/viefashionweek/" target="_blank"><img class="social" src="{% static 'img/facebook.png' %}"  ></a>
+             <a href="https://mobile.twitter.com/vfwbyasl" target="_blank" ><img class="social" src="{% static 'img/twitter.png' %}" ></a>
+             <a href="https://www.youtube.com/channel/UCiVwKi8FNk4pMbVTlSkEYPA" target="_blank" ><img class="social" src="{% static 'img/youtube.png' %}"  ></a>
+     <div style="font-size: 12px;margin-top: 20px;color:#C5B358;">Copyright © 2018 reference the copyright or licence conditions under which the material is provided on this site.</div>
+	 </div>
+
+</section>
+
+
+</body>
+<script>
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+<script>
+function hidemenu() {
+    document.getElementById("menu-close").style.display = "none";
+    document.getElementById("nav-menu").style.display = "none";
+    document.getElementById("menu-icon").style.display = "block";
+    document.getElementById("menu-icon").style.visibility = "visible";
+}
+
+function displaymenu() {
+	document.getElementById("menu-close").style.display = "block";
+    document.getElementById("menu-close").style.visibility = "visible";
+    document.getElementById("nav-menu").style.display = "block";
+    document.getElementById("nav-menu").style.visibility = "visible";
+    document.getElementById("menu-icon").style.display = "none";
+}
+
+</script>
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'sg3plcpnl0092'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src="{% static 'img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js' %}></script>
+<!-- Mirrored from www.vieawards.com/calendar.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Aug 2021 10:32:34 GMT -->
+</html>

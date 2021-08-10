@@ -1,0 +1,281 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.vieawards.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Aug 2021 10:08:56 GMT -->
+<head>
+<meta charset="UTF-8">
+<title>VIA - Vie International Awards</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'css/horizontalslider.css' %}" type="text/css" media="all">
+<link rel="shortcut icon" type="image/x-icon" href="{% url 'awardapp:index' %}">
+  <script type="text/javascript" src="{% static 'code.jquery.com/jquery-1.9.1.js' %}" ></script>
+ <script type="text/javascript" src="{% static 'js/lightbox.js' %}"></script>
+
+  <!-- TODO: Missing CoffeeScript 2 -->
+  <script type="text/javascript">
+
+    $(window).load(function(){
+
+var view = $("#tslshow");
+var move = "100px";
+var sliderLimit = -750
+
+$("#rightArrow").click(function(){
+
+    var currentPosition = parseInt(view.css("left"));
+    if (currentPosition >= sliderLimit) view.stop(false,true).animate({left:"-="+move},{ duration: 400})
+
+});
+
+$("#leftArrow").click(function(){
+
+    var currentPosition = parseInt(view.css("left"));
+    if (currentPosition < 0) view.stop(false,true).animate({left:"+="+move},{ duration: 400})
+
+});
+
+    });
+
+</script>
+
+</head>
+
+<body>
+
+<section >
+
+<img class="sliderimg" src="{% static 'img/slider.jpg' %}">
+<div class="inner">
+
+		<span class="mainmenutab">
+			<div id="menu-icon" onclick="displaymenu()" ><img src="{% static 'img/icon.png' %}" width="25px"></div>
+			<div id="menu-close" onclick="hidemenu()"><img src="{% static 'img/menu-close.png' %}" width="25px"></div>
+			<nav id="nav-menu">
+				 <ul>
+				  <li><a href="#" style="color:#C5B358;font-family:times new roman">Home</a></li>
+          <li><a href="{% url 'awardapp:about' %}" style="color:#C5B358;font-family:times new roman;">About</a></li>
+          <li><a href="{% url 'awardapp:gallery' %}" style="color:#C5B358;font-family:times new roman;">Gallery</a></li>
+          <li><a href="{% url 'awardapp:contact' %}" style="color:#C5B358;font-family:times new roman;">Contact</a></li>
+				</ul>
+			</nav>
+		</span>
+
+
+</div>
+
+
+
+</section>
+
+<section class="comingsoon" style='background-image: url("{% static 'img/comingsoon-bg.jpg' %}");'>
+
+</section>
+<!--<div class="spacer"></div>-->
+
+<!--<div class="team-head"><span style="background-color: black"><b> OUR TEAM </b></span></div>-->
+
+<!--<div class="spacer"></div>-->
+<!--<section style="padding-left: 10%;padding-right: 10%;">-->
+<!--        <div class="teamformob">-->
+
+<!--            <div class="teammember">-->
+<!--            <img src="img/team/team1.jpg" width="70%">-->
+<!--            <div class="name">Mr. Jude & Felix</div>-->
+<!--              <div class="designation">Show Director/ Choreographer</div>-->
+<!--              <div class="designation">-->
+<!--                  Show Director - VFW 2017 INDIA.<br>-->
+<!--                  Madura Garments Trade Show 2017.<br>-->
+<!--                  Indian Fashion League 2017.<br>-->
+<!--                  Miss Millenial by Malayalamanorama 2017.<br>-->
+<!--                  IIFT Bangaloru 2017.-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="teammember">-->
+<!--            <img src="img/team/team2.jpg" width="70%">-->
+<!--            <div class="name">Mr. Darren Aurelius Imossi</div>-->
+<!--              <div class="designation">Imossi Model Management </div>-->
+<!--              <div class="designation">-->
+<!--                  International Beauty Pageant  Judge-->
+<!--                  VFW 2017 India.<br>-->
+<!--                  London Fashion Week<br>-->
+<!--                  Paris Fashion Week<br>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="teammember">-->
+<!--            <img src="img/team/team3.jpg" width="70%">-->
+<!--            <div class="name">Mr. Jaimal Mistry</div>-->
+<!--              <div class="designation">Show Director/ Choreographer</div>-->
+<!--              <div class="designation">-->
+<!--                  VFW 2017 INDIA<br>-->
+<!--                  Miss India Uk <br>-->
+<!--                  Asian Women Awards<br>-->
+<!--                  B4U Inspiration Couture Show<br>-->
+<!--                  Wed Asia Bridal Shows<br>-->
+<!--                  House of Asia Catwalk show<br>-->
+<!--                  Alexander Mcqueen Show<br>-->
+<!--                  Asian Beauty Show-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="teammember">-->
+<!--            <img src="img/team/team4.jpg" width="70%">-->
+<!--            <div class="name">Akhil & Aiswarya</div>-->
+<!--              <div class="designation">Founder & Director - Vie Fashion Week </div>-->
+<!--              <div class="designation">-->
+<!--                  A Square London - The Fashion House .<br>-->
+<!--                  First couple to do an Ancient Mural Painting-->
+<!--on Western collections in London.<br>-->
+<!--                  Fashion Reality show judges.-->
+<!--              </div>-->
+<!--            </div>-->
+
+<!--        </div>-->
+
+<!--	  <div class="bstimeslider">-->
+<!--    <div id="rightArrow"></div>-->
+<!--    <div id="viewContainer">-->
+<!--        <div id="tslshow">-->
+<!--            <div class="bktibx">-->
+<!--            	<img src="img/team/team1.jpg" width="70%">-->
+<!--            	<div class="name">Mr. Jude & Felix</div>-->
+<!--            	<div class="designation">Show Director/ Choreographer</div>-->
+<!--              <div class="designation">-->
+<!--                  Show Director - VFW 2017 INDIA-->
+<!--                  Madura Garments Trade Show 2017-->
+<!--                  Indian Fashion League 2017-->
+<!--                  Miss Millenial by Malayalamanorama 2017-->
+<!--                  IIFT Bangaloru 2017-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="bktibx">-->
+<!--            	<img src="img/team/team2.jpg" width="70%">-->
+<!--            	<div class="name">Mr. Darren Aurelius Imossi</div>-->
+<!--            	<div class="designation">Imossi Model Management </div>-->
+<!--              <div class="designation">-->
+<!--                  International Beauty Pageant  Judge-->
+<!--                  VFW 2017 India.<br>-->
+<!--                  London Fashion Week<br>-->
+<!--                  Paris Fashion Week<br>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="bktibx">-->
+<!--            	<img src="img/team/team3.jpg" width="70%">-->
+<!--            	<div class="name">Mr. Jaimal Mistry</div>-->
+<!--            	<div class="designation">Show Director/ Choreographer</div>-->
+<!--              <div class="designation">-->
+<!--                  VFW 2017 INDIA<br>-->
+<!--                  Miss India Uk <br>-->
+<!--                  Asian Women Awards<br>-->
+<!--                  B4U Inspiration Couture Show<br>-->
+<!--                  Wed Asia Bridal Shows<br>-->
+<!--                  House of Asia Catwalk show<br>-->
+<!--                  Alexander Mcqueen Show<br>-->
+<!--                  Asian Beauty Show-->
+
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="bktibx">-->
+<!--            	<img src="img/team/team4.jpg" width="70%">-->
+<!--            	<div class="name">Akhil & Aiswarya</div>-->
+<!--            	<div class="designation">Founder & Director - Vie Fashion Week </div>-->
+<!--              <div class="designation">-->
+<!--                  A Square London - The Fashion House .<br>-->
+<!--                  First couple to do an Ancient Mural Painting-->
+<!--on Western collections in London.<br>-->
+<!--                  Fashion Reality show judges.-->
+<!--              </div>-->
+<!--            </div>-->
+
+
+<!--         </div>-->
+<!--    </div>-->
+<!--    <div id="leftArrow"><img src=""></div>-->
+<!--</div>-->
+
+
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "yfqyq9a9"
+      }], "*")
+    }
+  </script>
+</section>
+
+
+
+<section class="sponsor-scroll" >
+  <div class="spacer"></div>
+    <div class="sponsor-head"><span><b>SPONSORS & ASSOCIATIONS </b></span></div>
+    <div class="spacer"></div>
+	<marquee behavior="scroll" direction="left" scrollamount="10">
+    <img class="sponsor-img" src="{% static 'img/logos/logo-7.png' %}">
+    <img class="sponsor-img" src="{% static 'img/logos/logo-2.png' %}">
+    <img class="sponsor-img" src="{% static 'img/logos/logo-3.png' %}">
+    <img class="sponsor-img" src="{% static 'img/logos/logo-4.png' %}">
+    <img class="sponsor-img" src="{% static 'img/logos/logo-5.png' %}">
+    <img class="sponsor-img" src="{% static 'img/logos/logo-6.png' %}">
+    <img class="sponsor-img" src="{% static 'img/logos/logo-15.png' %}">
+
+	</marquee>
+  <div class="spacer"></div>
+</section>
+<section class="sponsor2" >
+  <div class="col-md-12">
+        <img width="100%" style="padding-left: 0%;" src="{% static 'img/logos/sponsorsbar.png' %}">
+  </div>
+<div class="spacer"></div>
+</section>
+<div class="spacer"></div>
+<section class="footer-menu" >
+	<a href="{% url 'awardapp:index' %}"><img src="{% static 'img/logo.png' %}" style="padding: 40px 0px 20px 0px; width: 10%"></a>
+	<nav>
+		<ul>
+           <li><a href="{% url 'awardapp:index' %}" style="color:#C5B358;font-family:times new roman;">Home</a></li>
+          <li><a href="{% url 'awardapp:about' %}" style="color:#C5B358;font-family:times new roman;">About</a></li>
+          <li><a href="{% url 'awardapp:gallery' %}" style="color:#C5B358;font-family:times new roman;">Gallery</a></li>
+          <li><a href="{% url 'awardapp:contact' %}" style="color:#C5B358;font-family:times new roman;">Contact</a></li>
+		</ul>
+	</nav>
+
+</section>
+
+<section class="social-icons" style="background-color:black;" >
+	<div style="background-color: black; padding: 55px;">
+	          <a href="https://www.instagram.com/viefashionweek/" target="_blank"><img class="social" src="{% static 'img/insta.png' %}"  ></a>
+             <a href="https://www.facebook.com/viefashionweek/" target="_blank"><img class="social" src="{% static 'img/facebook.png' %}"  ></a>
+             <a href="https://mobile.twitter.com/vfwbyasl" target="_blank" ><img class="social" src="{% static 'img/twitter.png' %}" ></a>
+             <a href="https://www.youtube.com/channel/UCiVwKi8FNk4pMbVTlSkEYPA" target="_blank" ><img class="social" src="{% static 'img/youtube.png' %}"  ></a>
+     <div style="font-size: 12px;margin-top: 20px;color:#C5B358;">Copyright © 2018 reference the copyright or licence conditions under which the material is provided on this site.</div>
+	 </div>
+
+</section>
+
+</body>
+<script>
+function hidemenu() {
+    document.getElementById("menu-close").style.display = "none";
+    document.getElementById("nav-menu").style.display = "none";
+    document.getElementById("menu-icon").style.display = "block";
+    document.getElementById("menu-icon").style.visibility = "visible";
+}
+
+function displaymenu() {
+	document.getElementById("menu-close").style.display = "block";
+    document.getElementById("menu-close").style.visibility = "visible";
+    document.getElementById("nav-menu").style.display = "block";
+    document.getElementById("nav-menu").style.visibility = "visible";
+    document.getElementById("menu-icon").style.display = "none";
+}
+
+</script>
+
+
+
+
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'sg3plcpnl0092'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
+<!-- Mirrored from www.vieawards.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Aug 2021 10:09:36 GMT -->
+</html>

@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.vieawards.com/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Aug 2021 10:32:34 GMT -->
+<head>
+<meta charset="UTF-8">
+<title>VIA - Vie International Awards</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'css/horizontalslider.css' %}" type="text/css" media="all">
+<link rel="shortcut icon" type="image/x-icon" href="{% url 'awardapp:index' %}">
+</head>
+<style>
+	input[type=submit] {
+    width: 50%;
+    background-color: #C5B358;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #ebbf43;
+}
+body{
+  background-image: url("{% static 'img/artboard.jpg' %}");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  }
+</style>
+<body>
+	<div class="header">
+				<div class="mainlogo">
+			<a href="{% url 'awardapp:index' %}"><img class="logo" src="{% static 'img/logo.png' %}"></a>
+		</div>
+				<span class="mainmenutab">
+			<div id="menu-icon" onclick="displaymenu()" ><img src="{% static 'img/icon.png' %}" width="25px"></div>
+			<div id="menu-close" onclick="hidemenu()"><img src="{% static 'img/menu-close.png' %}" width="25px"></div>
+			<nav id="nav-menu">
+			<ul>
+				  <li><a href="{% url 'awardapp:index' %}" style="color:#C5B358;font-family:times new roman;">Home</a></li>
+          <li><a href="{% url 'awardapp:about' %}" style="color:#C5B358;font-family:times new roman;">About</a></li>
+          <li><a href="{% url 'awardapp:gallery' %}" style="color:#C5B358;font-family:times new roman;">Gallery</a></li>
+          <li><a href="{% url 'awardapp:contact' %}" style="color:#C5B358;font-family:times new roman;">Contact</a></li>
+				</ul>
+
+			</nav>
+		</span>
+	</div>
+
+			<section class="">
+			<div class="" style="color:#C5B358;"><h2 style="color:#C5B358;">CONTACT US</h2></div>
+
+			<div class="formcontent">
+		 <form class="formstyle" action="" method="POST">
+			   <input type="text" name="name" placeholder="Name" required><br>
+			   <input type="email" name="email" placeholder="Email" ><br>
+			   <input type="text" name="mob" placeholder="Phone Number" required ><br>
+			   <input type="text" name="sub" placeholder="Subject" required><br>
+			   <textarea name="message" placeholder="Message" required></textarea>
+			   <input type="submit" value="SEND" name="submit">
+		</form>
+			</div>
+
+		<div class="spacer"></div>
+		</section>
+
+
+		<section class="footer-menu" >
+	<a href="{% url 'awardapp:index' %}"><img src="{% static 'img/logo.png' %}" style="padding: 40px 0px 20px 0px; width: 10%"></a>
+	<nav>
+		<ul>
+           <li><a href="{% url 'awardapp:index' %}" style="color:#C5B358;font-family:times new roman; ">Home</a></li>
+          <li><a href="{% url 'awardapp:about' %}" style="color:#C5B358;font-family:times new roman;">About</a></li>
+          <li><a href="{% url 'awardapp:gallery' %}" style="color:#C5B358;font-family:times new roman;">Gallery</a></li>
+          <li><a href="{% url 'awardapp:contact' %}" style="color:#C5B358;font-family:times new roman;">Contact</a></li>
+		</ul>
+	</nav>
+
+</section>
+<section class="social-icons" style="background-color:black;" >
+	<div style="background-color: black; padding: 55px;">
+	          <a href="https://www.instagram.com/viefashionweek/" target="_blank"><img class="social" src="{% static 'img/insta.png' %}"  ></a>
+             <a href="https://www.facebook.com/viefashionweek/" target="_blank"><img class="social" src="{% static 'img/facebook.png' %}"  ></a>
+             <a href="https://mobile.twitter.com/vfwbyasl" target="_blank" ><img class="social" src="{% static 'img/twitter.png' %}" ></a>
+             <a href="https://www.youtube.com/channel/UCiVwKi8FNk4pMbVTlSkEYPA" target="_blank" ><img class="social" src="{% static 'img/youtube.png' %}"  ></a>
+     <div style="font-size: 12px;margin-top: 20px;color:#C5B358;">Copyright © 2018 reference the copyright or licence conditions under which the material is provided on this site.</div>
+	 </div>
+
+</section>
+
+</body>
+
+
+<script>
+function hidemenu() {
+    document.getElementById("menu-close").style.display = "none";
+    document.getElementById("nav-menu").style.display = "none";
+    document.getElementById("menu-icon").style.display = "block";
+    document.getElementById("menu-icon").style.visibility = "visible";
+}
+
+function displaymenu() {
+	document.getElementById("menu-close").style.display = "block";
+    document.getElementById("menu-close").style.visibility = "visible";
+    document.getElementById("nav-menu").style.display = "block";
+    document.getElementById("nav-menu").style.visibility = "visible";
+    document.getElementById("menu-icon").style.display = "none";
+}
+
+</script>
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'sg3plcpnl0092'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
+<!-- Mirrored from www.vieawards.com/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Aug 2021 10:32:34 GMT -->
+</html>

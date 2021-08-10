@@ -1,0 +1,174 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<!-- Mirrored from www.vieawards.com/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Aug 2021 10:10:32 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <title>VIA - Vie International Awards</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'css/horizontalslider.css' %}" type="text/css" media="all">
+    <link rel="shortcut icon" type="image/x-icon" href="{% url 'awardapp:index' %}">
+
+    <style>
+	body{
+  background-image: url("{% static 'img/artboard4.jpg' %}");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  }
+  .spacer{
+  background-image: url("{% static 'img/artboard4.jpg' %}");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+
+  }
+  .founderimage{
+  background-image: url("{% static 'img/artboard4.jpg' %}");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  }
+  .bgtry{
+   background-image: url("{% static 'img/artboard4.jpg' %}");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  }
+  .footer-menu
+  {
+   background-image: url("{% static 'img/artboard4.jpg' %}");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  }
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="mainlogo">
+        <a href="{% url 'awardapp:index' %}"><img class="logo" src="{% static 'img/logo.png' %}"></a>
+    </div>
+    <span class="mainmenutab">
+			<div id="menu-icon" onclick="displaymenu()"><img src="{% static 'img/icon.png' %}" width="25px"></div>
+			<div id="menu-close" onclick="hidemenu()"><img src="{% static 'img/menu-close.png' %}" width="25px"></div>
+			<nav id="nav-menu">
+			<ul>
+				  <li><a href="{% url 'awardapp:index' %}"
+                         style="color:#C5B358;font-family:times new roman;">Home</a></li>
+          <li><a href="{% url 'awardapp:about' %}" style="color:#C5B358;font-family:times new roman;">About</a></li>
+          <li><a href="{% url 'awardapp:gallery' %}" style="color:#C5B358;font-family:times new roman;">Gallery</a></li>
+          <li><a href="{% url 'awardapp:contact' %}" style="color:#C5B358;font-family:times new roman;">Contact</a></li>
+				</ul>
+			</nav>
+		</span>
+</div>
+
+<section class="bgtry">
+    <div class="">
+        <div class=""><h2 style="color:#C5B358;font-family:times new roman;"> ABOUT</h2></div>
+        <div class="bodytext" style="text-align:justify;color:#C5B358;">
+            <p>Celebrities from different movie fraternity includes Bollywood and Hollywood
+                High end models from New York, London, Milan, and Paris Fashion Week will showcase collections of world
+                famous designers and emerging designers from different continents. Crowned Beauty Pageants & international models will showcase the most expensive and elegant collections
+                of designers from around the globe. VFW will be a creative and exciting Fashion Show for the fashion lovers in UAE VFW will be a great
+                opportunity for Sponsors and associate partners to market their products through one of a kind Fashion
+                Show ever in UAE VFW will be a great platform for New Product Launch as it has the most.
+            </p>
+        </div>
+    </div>
+    <div class="spacer"></div>
+    <div class=""><h1 style="color:#C5B358;font-family:times new roman;"> FOUNDER AND MANAGING DIRECTOR</h1></div>
+    <div class="bodytextjustify">
+        <br>
+        <div class="founderimage">
+            <img src="{% static 'img/founder.png' %}">
+            <div style="text-align: center; font-weight: 300;color: #ebb704;font-size: 25px; font-family: 'Tempus Sans ITC'; font-style: normal;color:#C5B358;">
+                Akhil & Aiswarya
+            </div>
+        </div>
+<p>
+        Akhil & Aiswarya, Fashion Designer couple, launched their Fashion organization, A Square London – The Fashion
+        House, in 2013 in London The couple did their Fashion studies in London and shortly started their Fashion
+        Empire, A Square London - The Fashion House, in 2013, an UK registered Fashion organization
+        Akhil & Aiswarya have done numerous Fashion shows around London, UAE, and India. They are the first Fashion
+        Designer couple to do an Ancient Mural Painting Fashion Show in London. The couple has also starred in a Fashion
+        Reality show in Kerala, India for a national Television broadcaster in 2016
+        A Square London – The Fashion House, launched the Vie Fashion Week in India with a star-studded line up of
+        international Designers, Models, Celebrities, Beauty Queens and Media from around the globe in association with
+        the Government Tourism department of Kerala, India.
+        Vie International Awards (VIA) is the new International Award Night project by A Square London, in the Fashion
+        and Life Style industry. VIA is going to be one of the most prestigious Award Night in the industry with 6 other
+        sub categories VIA will be associating with Tourism Department of various countries, International Magazines,
+        Media and corporate companies from around the globe
+        </p>
+
+    </div>
+    <div class="spacer"></div>
+
+
+
+</section>
+
+<section class="footer-menu">
+    <a href="{% url 'awardapp:index' %}"><img src="{% static 'img/logo.png' %}"
+                                              style="padding: 40px 0px 20px 0px; width: 10%"></a>
+    <nav>
+        <ul>
+            <li><a href="{% url 'awardapp:index' %}" style="color:#C5B358;font-family:times new roman;">Home</a></li>
+            <li><a href="{% url 'awardapp:about' %}" style="color:#C5B358;font-family:times new roman;">About</a></li>
+            <li><a href="{% url 'awardapp:gallery' %}" style="color:#C5B358;font-family:times new roman;">Gallery</a>
+            </li>
+            <li><a href="{% url 'awardapp:contact' %}" style="color:#C5B358;font-family:times new roman;">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+</section>
+<section class="social-icons" style="background-color:black;">
+    <div style="background-color: black; padding: 55px;">
+        <a href="https://www.instagram.com/viefashionweek/" target="_blank"><img class="social"
+                                                                                 src="{% static 'img/insta.png' %}"></a>
+        <a href="https://www.facebook.com/viefashionweek/" target="_blank"><img class="social"
+                                                                                src="{% static 'img/facebook.png' %}"></a>
+        <a href="https://mobile.twitter.com/vfwbyasl" target="_blank"><img class="social"
+                                                                           src="{% static 'img/twitter.png' %}"></a>
+        <a href="https://www.youtube.com/channel/UCiVwKi8FNk4pMbVTlSkEYPA" target="_blank"><img class="social"
+                                                                                                src="{% static 'img/youtube.png' %}"></a>
+        <div style="font-size: 12px;margin-top: 20px;color:#C5B358;">Copyright © 2018 reference the copyright or licence
+            conditions under which the material is provided on this site.
+        </div>
+    </div>
+
+</section>
+
+
+</body>
+
+
+<script>
+function hidemenu() {
+    document.getElementById("menu-close").style.display = "none";
+    document.getElementById("nav-menu").style.display = "none";
+    document.getElementById("menu-icon").style.display = "block";
+    document.getElementById("menu-icon").style.visibility = "visible";
+}
+
+function displaymenu() {
+	document.getElementById("menu-close").style.display = "block";
+    document.getElementById("menu-close").style.visibility = "visible";
+    document.getElementById("nav-menu").style.display = "block";
+    document.getElementById("nav-menu").style.visibility = "visible";
+    document.getElementById("menu-icon").style.display = "none";
+}
+
+
+</script>
+<script>
+    'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'sg3plcpnl0092'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.
+</script>
+<script src='../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
+<!-- Mirrored from www.vieawards.com/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Aug 2021 10:11:03 GMT -->
+</html>
